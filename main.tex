@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{book}
+
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\usepackage[left=1cm, right=6cm, top=1.5cm, bottom=1.2cm]{geometry}
+\usepackage{amssymb, graphicx, amsmath, amsthm}
+\usepackage{graphicx}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont{cwTeXMing}
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{laws}[thm]{Law}
+
+\begin{document}
+	\chapter{光的量子化}
+	\section{黑體輻射 Blackbody Radiation}
+	In 1859 Gustav Kirchhoff 
+	\begin{defn}\label{Def:BlackBody}
+		BlackBody\\
+		 an object that absorbs all the electricmagnets radtion on it.
+	\end{defn}
+	\begin{laws}\label{L:Kirchhoff's law of thermal radiation}
+		Kirchhoff's law of thermal radiation\\
+		\begin{align}e_f=J(f,T)A_f\label{E:Kirchhoff's law}\end{align}
+	where.
+	\begin{itemize}
+		\item $e_f$ is the power emitted per unit area per unit frequency
+		\item $J(f,T)$ is a universal function that depends only $f$, the light frequency and $T$, the body temperature
+		\item $A_f$ is the absorption power (fraction of the incident power)
+	\end{itemize}
+	\end{laws}
+	but why emitted power connect with absorption power?
+	\[e_{total,1} \cdot A_1 \cdot \Delta t = a_1 \cdot A_1 \Delta t\ \cdot I\]
+	$e_{total,1}$ is the power emitted per unit area,so LHS is the energy which emitted from backbody,and let RHS is the energy of absorption.\marginpar{\scriptsize RHS means Right hand side and LHS means Left Hand side}\\
+	where $a_1$ is a material constant and $I$ is Intensity.
+	\begin{align*}
+		&e_{total,1} = a_1I\qquad e_{total,2} = a_2I\\
+		&\frac{e_{total,1}}{a_1}=\frac{e_{total,2}}{a_2}=I\mbox{ (a material independent constant)}
+	\end{align*}
+	\\
+	According to Definition~\ref{Def:BlackBody} so $A_f$ of Blackbody Radiation is $1$ in Eq.~\ref{E:Kirchhoff's law}. ($A_f=1$ at blackbody)
+	
+		\subsection{Spectral Energy Density of a blackbody}
+		The more convenient of Law.~\ref{L:Kirchhoff's law of thermal radiation} to consider
+		the apectral energy density, $u(f,T)$, the energy per unit volume per unit frequenct og the radiation.
+		\begin{laws}\label{L:Rayleight-Jeans Law}
+			Rayleight-Jeans Law\\
+			\begin{align}
+			E=\frac{\int E \cdot e^{-E/k_BT}dE}{\int e^{-E/k_BT}dE}
+			\end{align}
+		\end{laws}
+
+\end{document}
